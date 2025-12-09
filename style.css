@@ -1,8 +1,14 @@
+/*
+*** STYLING FOR A MORE ATTRACTIVE AND CELEBRATORY LOOK ***
+*/
+
+/* Base styles and body background */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
-  /* Added subtle background pattern for texture */
-  background-image: radial-gradient(#fff4e8 1px, transparent 0);
+  /* Deeper, more vibrant gradient background */
+  background: linear-gradient(135deg, #f7b731 0%, #fd732b 100%);
+  /* Subtle pattern for texture */
+  background-image: radial-gradient(#ffffff20 1px, transparent 0);
   background-size: 20px 20px;
   margin: 0;
   display: flex;
@@ -10,89 +16,117 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
+/* Main quiz container - made it pop more */
 .quiz-container {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  padding: 40px;
+  background: #ffffff; /* Pure white background */
+  border-radius: 25px; /* Softer rounded corners */
+  /* Deeper, softer box shadow for a 'lifted' look */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  padding: 45px;
   max-width: 650px;
   width: 90%;
   text-align: center;
-  animation: fadeIn 1s ease-out;
+  transform: scale(1.0); /* Ensure it's not starting small */
+  animation: popIn 0.8s ease-out; /* Smooth entrance animation */
 }
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-20px); }
+
+/* Animation for the container entrance */
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(-30px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
+/* Title styling */
 h1 {
-  color: #d90429; /* Deep Red/Pink */
+  color: #8e2de2; /* Deep violet/purple for a festive header */
   font-weight: 700;
   margin-bottom: 25px;
-  font-size: 32px;
+  font-size: 36px; /* Larger title */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+/* Question styling */
 .question {
-  font-size: 20px;
-  margin: 25px 0 15px 0;
-  color: #333;
+  font-size: 22px;
+  margin: 30px 0 20px 0;
+  color: #333333;
   font-weight: 600;
+  line-height: 1.4;
 }
+
 /* Button Styling for Options, Start, and Submit */
 .options button, #startBtn, #submitBtn {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align text to the left */
+  justify-content: flex-start;
   text-align: left;
   width: 100%;
-  margin: 12px 0;
-  padding: 15px 20px;
+  margin: 15px 0;
+  padding: 18px 25px; /* Larger padding for easier tapping */
   font-size: 18px;
   border: none;
-  border-radius: 12px;
-  background: #ff6f61; /* Original color */
-  color: #fff;
+  border-radius: 15px; /* More rounded button edges */
+  background: #f0f0f0; /* Light gray background for options */
+  color: #333; /* Dark text for contrast */
   cursor: pointer;
   transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
   font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Hover/Active state for options */
 .options button:hover {
-  background: #ff3b2f;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+  background: #dcdcdc; /* Darker gray on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
+
+/* Specific styling for action buttons */
 #startBtn, #submitBtn {
-  background: #2a9d8f; /* Different color for action buttons */
+  background: linear-gradient(to right, #20bf55, #01ba87); /* Green/Teal action gradient */
+  color: white;
   justify-content: center;
+  font-size: 20px;
 }
 #startBtn:hover, #submitBtn:hover {
-  background: #264653;
+  background: linear-gradient(to right, #1f9e4e, #019970);
+  transform: translateY(-3px);
 }
+
 /* Style for the A, B, C, D prefixes */
 .option-prefix {
   font-weight: 700;
-  margin-right: 15px;
-  padding: 3px 8px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #8e2de2; /* Use the header color for the prefix boxes */
+  color: white;
+  min-width: 25px; /* Fixed width for better alignment */
+  text-align: center;
 }
+
+/* Text Input Styling */
 input[type="text"] {
   width: 90%;
-  padding: 15px;
-  margin: 10px 0;
+  padding: 18px;
+  margin: 15px 0;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 2px solid #ccc;
   transition: border-color 0.3s, box-shadow 0.3s;
   font-family: 'Poppins', sans-serif;
 }
 input[type="text"]:focus {
-  border-color: #ff6f61;
-  box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+  border-color: #f7b731; /* Use a bright background color for focus */
+  box-shadow: 0 0 10px rgba(247, 183, 49, 0.5);
   outline: none;
 }
+
+/* Score and Thank You message styling */
 #score {
-  font-size: 24px;
-  margin-top: 30px;
-  color: #2a9d8f;
-  font-weight: 600;
+  font-size: 26px;
+  margin-top: 40px;
+  color: #8e2de2;
+  font-weight: 700;
 }
