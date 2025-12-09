@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 const quizData = [
-  { question: "🎂 What's my date of birth?", options: ["10-12-2003", "05-05-2003", "01-01-2003", "12-10-2003"], answer: "10-12-2003" },
+  { question: "🎂 What's my date of birth?", options: ["10-12-2003", "10-12-2005", "10-12-2002", "12-10-2004"], answer: "10-12-2003" },
   { question: "🍲 What's my favorite food?", options: ["Pounded yam & Egusi soup", "Rice & Stew", "Jollof rice", "Beans & Plantain"], answer: "Pounded yam & Egusi soup" },
   { question: "⚽ What's my favorite sports team?", options: ["Barca", "Real Madrid", "Chelsea", "Man United"], answer: "Barca" },
   { question: "😱 What's something I'm afraid of?", options: ["Woman", "Heights", "Snakes", "Darkness"], answer: "Woman" },
